@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react'
-// import 'animate.css';
+import 'animate.css';
 import "@fontsource/poppins"
 import { colors } from './fundations/colors'
 
