@@ -1,8 +1,43 @@
-import { Heading, Text, chakra, Box, Button } from '@chakra-ui/react';
+import {
+  Heading,
+  Text,
+  chakra,
+  Box,
+  Button,
+  Flex,
+  Container,
+  ChakraProps,
+  Grid,
+  Link,
+} from '@chakra-ui/react';
 import Head from 'next/head';
 import bgSec1 from '@/assets/images/bg-sec-1.png';
 import { LogoIcon } from '@/assets/icons/LogoIcon';
 import { ButtonDefault } from '@/components/common/ButtonDefault';
+import { ReactNode } from 'react';
+import Image, { ImageProps } from 'next/image';
+import leo02 from '@/assets/images/leo02.png';
+
+const Wrapper: React.FC<{ children: ReactNode }> = ({ children }) => (
+  <Container maxW="120rem" centerContent>
+    {children}
+  </Container>
+);
+
+const ImageNextLogoSecundary: React.FC<{
+  chakraProps?: ChakraProps;
+  imageProps?: ImageProps;
+  scale: boolean;
+}> = ({ chakraProps, imageProps, scale }) => (
+  <Box {...chakraProps}>
+    <Image
+      alt="logo sencundária"
+      {...imageProps}
+      style={{ objectFit: 'contain', maxWidth: '100%', transform: scale ? 'scaleX(-1)' : 'none' }}
+      src={leo02}
+    />
+  </Box>
+);
 export const Home: React.FC = () => {
   return (
     <>
@@ -19,15 +54,19 @@ export const Home: React.FC = () => {
             h: { base: '100vh' },
             w: { base: '100%' },
 
-            bg: { base: 'none', xl: `url(${bgSec1.src}) no-repeat` },
+            bg: {
+              base: 'none',
+              lg: `url(${bgSec1.src}) no-repeat`,
+              xl: `url(${bgSec1.src}) no-repeat`,
+              '2xl': `url(${bgSec1.src}) no-repeat`,
+            },
             bgPosition: { base: 'none', xl: 'center' },
             bgSize: { base: 'none', xl: 'cover' },
             pos: 'relative',
           }}
         >
           <Box
-            w={{ base: '100vw', lg: '30vw', xl: '30vw' }}
-            maxW="31remrem"
+            w={{ base: '100vw', lg: '45vw', xl: '45vw' }}
             h={{ base: '10rem' }}
             pos="absolute"
             inset={{ base: '0 auto', lg: '5rem 0 auto 15rem', xl: '5rem 0 auto 15rem' }}
@@ -38,16 +77,26 @@ export const Home: React.FC = () => {
               base: '1rem',
             }}
           >
-            <LogoIcon
-              h={{ base: '10rem', lg: '10rem', xl: '10rem' }}
-              w={{
-                lg: '15rem',
-                xl: '15rem',
-                base: '20rem',
+            <Flex
+              w="100%"
+              justifyContent={{
+                base: 'center',
+                lg: 'flex-start',
+                xl: 'flex-start',
+                '2xl': 'flex-start',
               }}
-            />
-            <Heading as="h3" fontSize="1rem" lineHeight="1.7rem" mt="1rem" textAlign="left">
-              ACELERE O SEU METABOLISMO E CONSIGA DIMINUIR QUILOS NA BALANÇA COM O{' '}
+            >
+              <LogoIcon
+                h="10rem"
+                w={{
+                  lg: '20rem',
+                  xl: '20rem',
+                  base: '20rem',
+                }}
+              />
+            </Flex>
+            <Heading as="h3" fontSize="1.5rem" lineHeight="2.55rem" mt="1rem" textAlign="left">
+              ACELERE O SEU METABOLISMO E CONSIGA DIMINUIR QUILOS NA BALANÇA COM O
               <chakra.span color="blue.500">S30</chakra.span>, SÃO 30 DIAS DE TREINOS COM DURAÇÃO DE
               NO MÁXIMO 12 MINUTOS QUE FARÃO COM QUE O SEU CORPO{' '}
               <chakra.span color="blue.500">QUEIME 3X MAIS CALORIAS QUE O NORMAL</chakra.span>
@@ -55,10 +104,70 @@ export const Home: React.FC = () => {
             <ButtonDefault />
           </Box>
         </chakra.section>
+        <chakra.section>
+          <Wrapper>
+            <Heading
+              as="h2"
+              fontSize={{ base: '1.5rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
+              mt="1rem"
+              textAlign={{ base: 'left', lg: 'center', xl: 'center', '2xl': 'center' }}
+              textTransform="uppercase"
+              w="100%"
+            >
+              <chakra.span color="blue.500">queime</chakra.span> 3x mais{' '}
+              <chakra.span color="blue.500">calorias queo o normal</chakra.span>
+            </Heading>
+            <Flex
+              w="100%"
+              pos="relative"
+              justifyContent="space-between"
+              h="100vh"
+              alignItems="center"
+            >
+              <ImageNextLogoSecundary
+                scale
+                chakraProps={{
+                  w: '36rem',
+                  display: { base: 'none', lg: 'block', xl: 'block', '2xl': 'block' },
+                }}
+              />
+              <chakra.iframe
+                left="50%"
+                top="50%"
+                transform="translate(-50%, -50%)"
+                pos="absolute"
+                zIndex={2}
+                width={{ base: '100%', lg: '50rem', xl: '50rem', '2xl': '50rem' }}
+                height={{ base: '100%', lg: '28rem', xl: '28rem', '2xl': '28rem' }}
+                src="https://www.youtube.com/embed/aO4w_I1X45Y"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></chakra.iframe>
+              <ImageNextLogoSecundary
+                scale={false}
+                chakraProps={{
+                  w: '36rem',
+                  display: { base: 'none', lg: 'block', xl: 'block', '2xl': 'block' },
+                }}
+              />
+            </Flex>
+          </Wrapper>
+        </chakra.section>
       </chakra.main>
 
-      <chakra.footer bg="blue.500" w="100%" textAlign="center" p="1rem">
-        <Text>Copyright © 2022 Nome da Empresa de Leo</Text>
+      <chakra.footer bg="blue.500" w="100%" h="5rem">
+        <Grid w="100" h="100%" templateRows="1fr 0.5fr">
+          <Text h="100%" alignContent="end" textAlign="center" py="0.5rem">
+            Copyright © 2022 Nome da Empresa de Leo
+          </Text>
+          <Text bg="blue.300" w="100%" mt="auto" px="0.5rem">
+            {`Made </> with`} &#128151; by{' '}
+            <Link href="https://github.com/ManeMaria" isExternal>
+              cesar
+            </Link>
+          </Text>
+        </Grid>
       </chakra.footer>
     </>
   );
