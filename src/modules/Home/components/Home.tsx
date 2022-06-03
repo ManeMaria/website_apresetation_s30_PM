@@ -419,16 +419,15 @@ export const Home: React.FC = () => {
               }}
               gap="2rem"
             >
-              <Grid textStyle="paragraph" fontSize="1.4rem">
+              <Grid textStyle="paragraph" fontSize="1.4rem" gap="3rem">
                 <Heading
                   as="h2"
-                  fontSize={{ base: '1.7rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
+                  fontSize={{ base: '2.5rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
                   mt="1rem"
                   textAlign="center"
                   textStyle="paragraph"
                   w="100%"
                   lineHeight="80%"
-                  mb="4rem"
                 >
                   <chakra.span color="blue.500" fontWeight={700}>
                     bônus:
@@ -440,7 +439,7 @@ export const Home: React.FC = () => {
                     você irá levar:
                   </chakra.span>
                 </Heading>
-                <List>
+                <List spacing="1rem">
                   <ListItem>- protocolo big coxas</ListItem>
                   <ListItem>- protocolo abdominal de titanium</ListItem>
                   <ListItem>- protocolo bumbum up</ListItem>
