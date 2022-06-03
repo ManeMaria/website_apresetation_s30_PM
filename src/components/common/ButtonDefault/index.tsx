@@ -4,6 +4,7 @@ import React from 'react';
 export function ButtonDefault({ children, ...props }: ButtonProps) {
   return (
     <Button
+      textStyle="paragraph"
       color="black.900"
       colorScheme="green"
       boxShadow=" 0 0 20px 1px #58FF9B"
@@ -13,7 +14,7 @@ export function ButtonDefault({ children, ...props }: ButtonProps) {
       mt="2rem"
       {...props}
     >
-      {children ?? 'TRANSFORME AGORA A SUA VIDA'}
+      {children ?? 'transform sua vida agora'}
     </Button>
   );
 }

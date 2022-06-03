@@ -1,7 +1,9 @@
 import { extendTheme } from '@chakra-ui/react'
 import 'animate.css';
 import "@fontsource/poppins"
-import { colors } from './fundations/colors'
+import "@fontsource/poppins/700.css"
+import { colors, textStyles } from './fundations'
+
 
 const theme = extendTheme({
   colors,
@@ -25,7 +27,8 @@ const theme = extendTheme({
         WebkitTapHighlightColor: 'transparent',
       },
     })
-  }
+  },
+  textStyles
 
 })
 
