@@ -422,7 +422,7 @@ export const Home: React.FC = () => {
               <Grid textStyle="paragraph" fontSize="1.4rem" gap="3rem">
                 <Heading
                   as="h2"
-                  fontSize={{ base: '1.7rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
+                  fontSize={{ base: '2.5rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
                   mt="1rem"
                   textAlign="center"
                   textStyle="paragraph"
