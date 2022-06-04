@@ -441,7 +441,7 @@ export const Home: React.FC = () => {
                     você irá levar:
                   </chakra.span>
                 </Heading>
-                <List spacing="0.5rem">
+                <List spacing="0.5rem" my="1rem">
                   <ListItem>- protocolo big coxas</ListItem>
                   <ListItem>- protocolo abdominal de titanium</ListItem>
                   <ListItem>- protocolo bumbum up</ListItem>
