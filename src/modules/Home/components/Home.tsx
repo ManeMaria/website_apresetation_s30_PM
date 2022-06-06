@@ -11,8 +11,8 @@ import {
   GridItem,
   List,
   Spacer,
+  ListIcon,
 } from '@chakra-ui/react';
-import Head from 'next/head';
 
 import bgSec1 from '@/assets/images/bg-sec-1.png';
 import bgSec2 from '@/assets/images/bg-sec-2.png';
@@ -33,6 +33,9 @@ import dep2 from '@/assets/images/dep_2.png';
 import dep3 from '@/assets/images/dep_3.png';
 import dep4 from '@/assets/images/dep_4.png';
 import fullImg from '@/assets/images/full_imgs.png';
+import payments from '@/assets/images/payments.png';
+import stamp from '@/assets/images/stamp.png';
+import { BurdenIcon } from '@/assets/icons/BurdenIcon';
 
 const ImageNextLogoSecundary: React.FC<{
   chakraProps?: ChakraProps;
@@ -54,14 +57,18 @@ const DefaultPhrase: React.FC<ChakraProps> = ({ ...restProps }) => (
     as="h2"
     fontSize={{ base: '1.5rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
     mt="1rem"
-    textAlign={{ base: 'left', lg: 'center', xl: 'center', '2xl': 'center' }}
-    textStyle="paragraph"
+    textAlign="center"
+    textStyle="h1"
     w="100%"
     {...restProps}
   >
     <chakra.span color="blue.500">queime</chakra.span> 3x mais{' '}
     <chakra.span color="blue.500">calorias que o normal</chakra.span>
   </Heading>
+);
+
+const IconListSection2: React.FC<ChakraProps> = ({ ...restProps }) => (
+  <ListIcon as={BurdenIcon} boxSize="1.4rem" {...restProps} />
 );
 
 export const Home: React.FC = () => {
@@ -71,7 +78,7 @@ export const Home: React.FC = () => {
         <chakra.section
           className="animate__animated animate__fadeIn animate__slower 1s"
           sx={{
-            minH: { base: '90vh', md: '50vh', lg: '100vh', xl: '100vh' },
+            minH: { base: '100vh', md: '50vh', lg: '100vh', xl: '100vh' },
 
             w: { base: '100%' },
 
@@ -80,69 +87,72 @@ export const Home: React.FC = () => {
               lg: `url(${bgSec1.src}) no-repeat`,
               xl: `url(${bgSec1.src}) no-repeat`,
             },
-            bgPosition: { base: 'top', xl: 'center' },
-            bgSize: { base: 'contain', xl: 'cover' },
+            bgPosition: { base: 'top right 15%', lg: 'center', xl: 'center' },
+            bgSize: { base: 'auto 55%', xl: 'cover' },
             pos: 'relative',
+            mb: { base: '10rem', lg: '0', xl: '0' },
           }}
         >
           <Box
+            bg={{ base: 'black.900', lg: '0', xl: '0' }}
             w={{ base: '100vw', lg: '45vw', xl: '45vw' }}
-            h={{ base: '10rem' }}
+            h={{ base: '30rem', lg: 'auto', xl: 'auto' }}
             maxW="50rem"
-            pos={{ base: 'static', lg: 'absolute', xl: 'absolute' }}
-            inset={{ base: '10rem auto', lg: '5rem 0 auto 15rem', xl: '5rem 0 auto 15rem' }}
+            pos={{ base: 'absolute', lg: 'absolute', xl: 'absolute' }}
+            inset={{ base: '50vh auto', lg: '5rem 0 auto 15rem', xl: '5rem 0 auto 15rem' }}
             className="animate__animated animate__fadeInLeft"
             px={{
               lg: '0',
               xl: '0',
               base: '1rem',
             }}
-            pt={{ base: '9rem', lg: '0', xl: '0' }}
+            pt={{ base: '0', lg: '0', xl: '0' }}
+            boxShadow={{ base: '0px -20px 60px 50px #000', lg: 'none', xl: 'none' }}
           >
-            <Flex
-              w="100%"
-              justifyContent={{
-                base: 'center',
-                lg: 'flex-start',
-                xl: 'flex-start',
+            <Box
+              pos={{ base: 'absolute', lg: 'static', xl: 'static' }}
+              top={{ base: '-5rem' }}
+              px={{
+                lg: '0',
+                xl: '0',
+                base: '1rem',
               }}
             >
-              <LogoIcon
-                h={{ base: '8rem', lg: '10rem', xl: '10rem' }}
-                w={{
-                  lg: '20rem',
-                  xl: '20rem',
-                  base: '15rem',
-                }}
-              />
-            </Flex>
-            <Heading as="h3" fontSize="1.5rem" mt="1rem" textAlign="left">
-              A
-              <chakra.span textTransform="lowercase">
-                CELERE O SEU METABOLISMO E CONSIGA DIMINUIR QUILOS NA BALANÇA COM O{' '}
-                <chakra.span color="blue.500">S30</chakra.span>, SÃO 30 DIAS DE TREINOS COM DURAÇÃO
-                DE NO MÁXIMO 12 MINUTOS QUE FARÃO COM QUE O SEU CORPO{' '}
-                <chakra.span color="blue.500">QUEIME 3X MAIS CALORIAS QUE O NORMAL</chakra.span>
-              </chakra.span>
-            </Heading>
-            <ButtonDefault />
+              <Flex w="100%" justifyContent="flex-start">
+                <LogoIcon
+                  h={{ base: '8rem', lg: '10rem', xl: '10rem' }}
+                  w={{
+                    lg: '20rem',
+                    xl: '20rem',
+                    base: '15rem',
+                  }}
+                  alignSelf="start"
+                />
+              </Flex>
+              <Heading as="h3" fontSize="1.4rem" mt="1rem" textAlign="left" textStyle="paragraph">
+                Tenha menos inchaço abdominal, elimine a retenção e reduza quilos na balança em
+                apenas 4 semanas com a ajuda do protocolo S30. São necessários 12 minutos por dia
+                pra você ficar mais atraente e com maior autoestima em tempo recorde.
+              </Heading>
+              <ButtonDefault />
+            </Box>
           </Box>
         </chakra.section>
-        <chakra.section>
+        <chakra.section minH={{ base: 'auto', lg: 'auto', xl: 'auto' }}>
           <Wrapper>
             <DefaultPhrase />
             <Flex
               w="100%"
               pos="relative"
               justifyContent="space-between"
-              h={{ base: '15rem', lg: 'auto', xl: 'auto' }}
               alignItems="center"
+              flexDir={{ base: 'column', lg: 'row', xl: 'row' }}
+              gap="1rem"
             >
               <ImageNextLogoSecundary
                 scale
                 chakraProps={{
-                  w: '30rem',
-                  display: { base: 'none', lg: 'block', xl: 'block', '2xl': 'block' },
+                  w: { base: '100%', lg: '30rem', xl: '30rem' },
                 }}
               />
               <chakra.iframe
@@ -156,7 +166,7 @@ export const Home: React.FC = () => {
                 pos={{ base: 'static', lg: 'absolute', xl: 'absolute' }}
                 zIndex={2}
                 width={{ base: '100%', lg: '45rem', xl: '40rem' }}
-                height={{ base: '10rem', lg: '25rem', xl: '25rem' }}
+                height={{ base: '100%', lg: '25rem', xl: '25rem' }}
                 src="https://www.youtube.com/embed/aO4w_I1X45Y"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -166,30 +176,75 @@ export const Home: React.FC = () => {
                 scale={false}
                 chakraProps={{
                   w: '30rem',
-
-                  display: { base: 'none', lg: 'block', xl: 'block', '2xl': 'block' },
+                  display: { base: 'none', lg: 'block', xl: 'block' },
                 }}
               />
+              <Grid display={{ base: 'grid', lg: 'none', xl: 'none' }} gap="2rem">
+                <Box>
+                  {' '}
+                  <Heading textAlign="center">Para quem é o programa?</Heading>
+                </Box>
+                <List textStyle="h1" fontWeight="700" spacing="2rem">
+                  <ListItem>
+                    <Flex>
+                      <IconListSection2 />
+                      para você que quer ter um bom caimento das roupas
+                    </Flex>
+                  </ListItem>
+                  <ListItem>
+                    <Flex>
+                      <IconListSection2 />
+                      pra você que tá com a barriga inchada
+                    </Flex>
+                  </ListItem>
+                  <ListItem>
+                    <Flex>
+                      <IconListSection2 /> pra quem tá acima do peso. chegou a hora de transformar
+                      sua realidade em tempo recorde
+                    </Flex>
+                  </ListItem>
+                  <ListItem>
+                    <Flex>
+                      <IconListSection2 />
+                      você que é falso magro(a) que tem pochete!
+                    </Flex>
+                  </ListItem>
+                  <ButtonDefault />
+                </List>
+              </Grid>
             </Flex>
           </Wrapper>
         </chakra.section>
-        <chakra.section>
+        <chakra.section
+          sx={{
+            w: { base: '100%' },
+            bg: {
+              base: 'none',
+              lg: `url(${bgSec3.src}) no-repeat`,
+              xl: `url(${bgSec3.src}) no-repeat`,
+            },
+            bgPosition: { base: 'center' },
+            bgSize: { base: 'center', xl: 'cover' },
+          }}
+        >
           <Wrapper>
             <Heading
               as="h2"
               fontSize={{ base: '1.5rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
               mt="1rem"
               textAlign="center"
-              textStyle="paragraph"
+              textStyle="h1"
               w="100%"
             >
               O resultado
             </Heading>
-            <Flex
+            <Grid
+              templateColumns="repeat(5, 1fr)"
               gap="1rem"
               p="2rem"
-              flexWrap={{ base: 'wrap', xl: 'nowrap' }}
               justifyContent="center"
+              overflowX="scroll"
+              w="100%"
             >
               <Image
                 src={client01}
@@ -207,9 +262,11 @@ export const Home: React.FC = () => {
                 alt="clientes 3"
                 className="animate__animated animate__slideInRight animate__delay 1s"
               />
-            </Flex>
+              <Image src={client04} alt="clientes 3" />
+              <Image src={client05} alt="clientes 3" />
+            </Grid>
             <Grid maxW="48rem" mx="auto" placeItems="center" my="1rem">
-              <Text fontSize="1.4rem" textAlign="center" textStyle="paragraph">
+              <Text fontSize="1.4rem" textAlign="center" textStyle="h1">
                 você não precisa treinar 1 hora por dia, não precisa ir para a academia, menos ainda
                 fazer muito aeróbico (corrida, caminhas).
                 <chakra.span color="blue.500" fontWeight={500}>
@@ -229,18 +286,16 @@ export const Home: React.FC = () => {
             minH: { base: '100vh' },
             w: { base: '100%' },
             bg: {
-              base: 'none',
-              lg: `url(${bgSec2.src}) no-repeat`,
-              xl: `url(${bgSec2.src}) no-repeat`,
-              '2xl': `url(${bgSec2.src}) no-repeat`,
+              base: `url(${bgSec2.src}) no-repeat`,
             },
-            bgPosition: { base: 'none', xl: 'center' },
-            bgSize: { base: 'none', xl: 'cover' },
+            bgPosition: { base: '70% 50%' },
+            bgSize: { base: 'cover' },
           }}
           mt="2rem"
         >
           <Wrapper>
             <Grid
+              display={{ base: 'none', lg: 'block', xl: 'block' }}
               templateColumns={{ base: '1fr', lg: '1fr 1fr', xl: '1fr 1fr' }}
               w="100%"
               gap="3rem"
@@ -316,9 +371,20 @@ export const Home: React.FC = () => {
                 </Box>
               </Grid>
             </Grid>
+            <Flex
+              h="100vh"
+              alignItems="end"
+              display={{ base: 'fex', lg: 'none', xl: 'none' }}
+              textStyle="h1"
+            >
+              <Heading as="h2" textAlign="center" color="blue.500" fontSize="1.2rem">
+                até aqui você economizou 229,90 acreditar é essencial, mas ter a atitude faz toda
+                diferença
+              </Heading>
+            </Flex>
           </Wrapper>
         </chakra.section>
-        <chakra.section my="3rem">
+        <chakra.section my="3rem" display={{ base: 'none', lg: 'block', xl: 'block' }}>
           <Wrapper>
             <Grid
               maxH={{ base: '40vh', lg: 'none', xl: 'none' }}
@@ -364,6 +430,7 @@ export const Home: React.FC = () => {
         </chakra.section>
         <chakra.section
           sx={{
+            display: { base: 'none', lg: 'block', xl: 'block' },
             w: { base: '100%' },
             bg: {
               base: 'none',
@@ -411,7 +478,7 @@ export const Home: React.FC = () => {
             </Grid>
           </Wrapper>
         </chakra.section>
-        <chakra.section my="2rem">
+        <chakra.section my="2rem" display={{ base: 'none', lg: 'block', xl: 'block' }}>
           <Wrapper>
             <Grid
               templateColumns={{
@@ -427,7 +494,7 @@ export const Home: React.FC = () => {
                   fontSize={{ base: '2.5rem', lg: '3rem', xl: '3rem' }}
                   mt="1rem"
                   textAlign="center"
-                  textStyle="paragraph"
+                  textStyle="h1"
                   w="100%"
                   lineHeight="80%"
                 >
@@ -457,7 +524,7 @@ export const Home: React.FC = () => {
                   <chakra.span textTransform="initial">
                     {' '}
                     Tenha atitudes de mudança e tenha{' '}
-                    <chakra.span color="blue.500" fontWeight={500} textStyle="paragraph">
+                    <chakra.span color="blue.500" fontWeight={500} textStyle="h1">
                       resultados de verdade
                     </chakra.span>
                   </chakra.span>
@@ -475,21 +542,19 @@ export const Home: React.FC = () => {
         </chakra.section>
         <chakra.section
           sx={{
-            h: { base: '90vh', lg: '120vh', xl: '120vh' },
+            h: { base: '50vh', lg: '120vh', xl: '120vh' },
             maxH: '100rem',
             w: { base: '100%' },
-            bg: {
-              base: 'none',
-              lg: `url(${leo04.src}) no-repeat`,
-              xl: `url(${leo04.src}) no-repeat`,
-            },
-            bgPosition: { base: 'none', xl: 'left bottom' },
-            bgSize: { base: 'none', xl: '65%' },
+            bg: `url(${leo04.src}) no-repeat`,
+            bgPosition: { base: 'bottom center', lg: 'bottom left', xl: 'bottom left' },
+            bgSize: { base: '100%', lg: '65%', xl: '65%' },
             pos: 'relative',
+            boxShadow: 'inset 0 0 50px 50px #000',
           }}
         >
           <Wrapper>
             <Grid
+              display={{ base: 'none', lg: 'grid', xl: 'grid' }}
               pos="absolute"
               inset={{ base: 'auto', lg: '10% 27% auto auto', xl: '10% % auto auto' }}
               w={{ base: 'calc(100% - 2rem)', lg: '12rem', xl: '12rem' }}
@@ -499,7 +564,7 @@ export const Home: React.FC = () => {
                 as="h2"
                 fontSize={{ base: '2rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
                 mt="1rem"
-                textStyle="paragraph"
+                textStyle="h1"
                 w="100%"
                 mb="2rem"
               >
@@ -514,7 +579,6 @@ export const Home: React.FC = () => {
               <Box border="solid 5px" borderColor="white" fontWeight={700}>
                 <Flex
                   justifyContent="center"
-                  textTransform="uppercase"
                   h="100%"
                   w={{ base: 'auto', lg: '25rem', xl: '25rem' }}
                   flexDir="column"
@@ -558,10 +622,36 @@ export const Home: React.FC = () => {
                   </Flex>
                 </Flex>
               </Box>
-              <Box maxW="40rem" w={{ base: '100%', lg: '80%', xl: '80%' }} justifySelf="center">
+              <Box
+                maxW="40rem"
+                w={{ base: '100%', lg: '80%', xl: '80%' }}
+                justifySelf="center"
+                display={{ base: 'block', lg: 'none', xl: 'none' }}
+              >
                 <ButtonDefault />
               </Box>
             </Grid>
+          </Wrapper>
+        </chakra.section>
+        <chakra.section display={{ base: 'block', lg: 'none', xl: 'none' }} mb="2rem">
+          <Wrapper>
+            <Flex flexWrap="wrap" justifyContent="center" gap="2rem" textStyle="paragraph">
+              <ButtonDefault />
+              <Box>
+                <Heading as="h4" size="md" textAlign="center" mb="2rem">
+                  {' '}
+                  teste grátis por 7 dias
+                </Heading>
+                <Text textAlign="center" fontWeight="bold">
+                  Risco zero! Experimente, se não gostar, não paga. Nosso programa é completo, tenho
+                  certeza que você transformará sua vida para sempre. Venha bater um papo com a
+                  gente, vamos descobrir a melhor estratégia para você!
+                </Text>
+              </Box>
+
+              <Image src={stamp} alt="selo" />
+              <Image src={payments} alt="pagamentos" />
+            </Flex>
           </Wrapper>
         </chakra.section>
       </chakra.main>
