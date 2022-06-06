@@ -10,6 +10,9 @@ export const colors = {
   },
   green: {
     500: '#58FF9B'
+  },
+  yellow: {
+    500: '#EDA91E'
   }
 
 };

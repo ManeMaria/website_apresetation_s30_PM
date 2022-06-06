@@ -4,14 +4,14 @@ import React from 'react';
 export function ButtonDefault({ children, ...props }: ButtonProps) {
   return (
     <Button
-      textStyle="paragraph"
-      color="black.900"
-      colorScheme="green"
-      boxShadow=" 0 0 20px 1px #58FF9B"
+      textStyle="h1"
+      color="white"
+      bg="yellow.500"
       w="100%"
       borderRadius={40}
-      py="1.7rem"
+      py="2rem"
       mt="2rem"
+      fontSize="1.2rem"
       {...props}
     >
       {children ?? 'transform sua vida agora'}
