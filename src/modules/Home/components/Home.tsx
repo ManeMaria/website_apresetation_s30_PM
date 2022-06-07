@@ -7,16 +7,17 @@ import {
   Flex,
   ChakraProps,
   ListItem,
-  OrderedList,
   GridItem,
   List,
-  Spacer,
   ListIcon,
+  Circle,
 } from '@chakra-ui/react';
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 import bgSec1 from '@/assets/images/bg-sec-1.png';
 import bgSec2 from '@/assets/images/bg-sec-2.png';
 import bgSec3 from '@/assets/images/bg-sec-3.png';
+import bgSec2M from '@/assets/images/bg-sec-2-m.png';
 import { LogoIcon } from '@/assets/icons/LogoIcon';
 import { ButtonDefault, Wrapper, Footer } from '@/components/';
 import Image, { ImageProps } from 'next/image';
@@ -28,6 +29,11 @@ import client02 from '@/assets/images/client_02.png';
 import client03 from '@/assets/images/client_03.png';
 import client04 from '@/assets/images/client_04.png';
 import client05 from '@/assets/images/client_05.png';
+import client06 from '@/assets/images/client_06.png';
+import client07 from '@/assets/images/client_07.png';
+import client08 from '@/assets/images/client_08.png';
+import client09 from '@/assets/images/client_09.png';
+import client10 from '@/assets/images/client_10.png';
 import dep1 from '@/assets/images/dep_1.png';
 import dep2 from '@/assets/images/dep_2.png';
 import dep3 from '@/assets/images/dep_3.png';
@@ -70,6 +76,13 @@ const DefaultPhrase: React.FC<ChakraProps> = ({ ...restProps }) => (
 const IconListSection2: React.FC<ChakraProps> = ({ ...restProps }) => (
   <ListIcon as={BurdenIcon} boxSize="1.4rem" {...restProps} />
 );
+
+const Span = chakra('span', {
+  baseStyle: {
+    color: 'blue.500',
+    fontWeight: '700',
+  },
+});
 
 export const Home: React.FC = () => {
   return (
@@ -129,10 +142,11 @@ export const Home: React.FC = () => {
                   alignSelf="start"
                 />
               </Flex>
-              <Heading as="h3" fontSize="1.4rem" mt="1rem" textAlign="left" textStyle="paragraph">
+              <Heading as="h3" fontSize="1.4rem" mt="1rem" textAlign="left">
                 Tenha menos inchaço abdominal, elimine a retenção e reduza quilos na balança em
-                apenas 4 semanas com a ajuda do protocolo S30. São necessários 12 minutos por dia
-                pra você ficar mais atraente e com maior autoestima em tempo recorde.
+                apenas 4 semanas com a ajuda do protocolo <Span>S30</Span>. São necessários 12
+                minutos por dia pra você ficar mais atraente e com maior autoestima em tempo
+                recorde.
               </Heading>
               <ButtonDefault />
             </Box>
@@ -217,6 +231,33 @@ export const Home: React.FC = () => {
         </chakra.section>
         <chakra.section
           sx={{
+            my: '2rem',
+            d: { base: 'block', lg: 'none', xl: 'none' },
+            w: { base: '100%' },
+            bg: `url(${bgSec2M.src}) no-repeat`,
+            bgPosition: { base: 'top' },
+            bgSize: { base: 'contain' },
+          }}
+        >
+          <Wrapper>
+            <Heading as="h2" fontSize={{ base: '2rem' }} textAlign="center" w="100%" mb="10rem">
+              <Span>Como funciona o protocolo s30?</Span>
+            </Heading>
+            <Box p="1rem">
+              <Text textStyle="paragraph">
+                O <Span>s30</Span> proriza a quebra de adaptação, fazendo com que seu metabolismo
+                não se adapte aos estimulos mantendo a frequência cardiaca elevada, e então,{' '}
+                <Span fontSize="1rem">queimar mais calorias em tempo recorde.</Span>
+              </Text>
+              <Text textStyle="paragraph">
+                O <Span>s30</Span> é a combinação perfeita de treinos intensos, frquência ideal e
+                ciência comprovada.
+              </Text>
+            </Box>
+          </Wrapper>
+        </chakra.section>
+        <chakra.section
+          sx={{
             w: { base: '100%' },
             bg: {
               base: 'none',
@@ -230,50 +271,84 @@ export const Home: React.FC = () => {
           <Wrapper>
             <Heading
               as="h2"
-              fontSize={{ base: '1.5rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
+              fontSize={{ base: '2rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
               mt="1rem"
               textAlign="center"
               textStyle="h1"
               w="100%"
             >
-              O resultado
+              <Span>antes de depois</Span>
             </Heading>
-            <Grid
-              templateColumns="repeat(5, 1fr)"
-              gap="1rem"
-              p="2rem"
-              justifyContent="center"
-              overflowX="scroll"
-              w="100%"
-            >
-              <Image
-                src={client01}
-                alt="clientes 1"
-                className="animate__animated animate__ animate__delay 1s"
-              />
+            <Grid overflow="auto" w="100%">
+              <Grid
+                templateColumns={{
+                  base: 'repeat(11, 100%)',
+                  md: 'repeat(11, 25rem)',
+                  lg: 'repeat(11, 25rem)',
+                  xl: 'repeat(11, 25rem)',
+                }}
+                columnGap="2rem"
+              >
+                <Image
+                  src={client01}
+                  alt="clientes 1"
+                  className="animate__animated animate__ animate__delay 1s"
+                />
+                <Image src={client04} alt="clientes 3" />
+                <Image src={client05} alt="clientes 3" />
 
-              <Image
-                src={client02}
-                alt="clientes 2"
-                className="animate__animated animate__slideInUp animate__delay 1s"
-              />
-              <Image
-                src={client03}
-                alt="clientes 3"
-                className="animate__animated animate__slideInRight animate__delay 1s"
-              />
-              <Image src={client04} alt="clientes 3" />
-              <Image src={client05} alt="clientes 3" />
+                <Image src={leo03} alt="o criador do projeto" />
+                <Image
+                  src={client02}
+                  alt="clientes 2"
+                  className="animate__animated animate__slideInUp animate__delay 1s"
+                />
+
+                <Image
+                  src={client03}
+                  alt="clientes 3"
+                  className="animate__animated animate__slideInRight animate__delay 1s"
+                />
+                <Image
+                  src={client06}
+                  alt="clientes 6"
+                  className="animate__animated animate__slideInRight animate__delay 1s"
+                />
+                <Image
+                  src={client07}
+                  alt="clientes 7"
+                  className="animate__animated animate__slideInRight animate__delay 1s"
+                />
+                <Image
+                  src={client08}
+                  alt="clientes 8"
+                  className="animate__animated animate__slideInRight animate__delay 1s"
+                />
+                <Image
+                  src={client09}
+                  alt="clientes 9"
+                  className="animate__animated animate__slideInRight animate__delay 1s"
+                />
+                <Image
+                  src={client10}
+                  alt="clientes 10"
+                  className="animate__animated animate__slideInRight animate__delay 1s"
+                />
+              </Grid>
+            </Grid>
+            <Grid justifySelf="center" my="2rem">
+              <Circle size="40px" bg="blue.500">
+                <ArrowForwardIcon boxSize="25px" color="black" />
+              </Circle>
             </Grid>
             <Grid maxW="48rem" mx="auto" placeItems="center" my="1rem">
-              <Text fontSize="1.4rem" textAlign="center" textStyle="h1">
-                você não precisa treinar 1 hora por dia, não precisa ir para a academia, menos ainda
-                fazer muito aeróbico (corrida, caminhas).
-                <chakra.span color="blue.500" fontWeight={500}>
-                  {' '}
-                  o s30 te dará um direcinamento, um protocolo com treinos rápidos
-                </chakra.span>
-                , intensos voltados para o emafrecimento e definição em 4 semanas.
+              <Text>
+                <Span>Você não precisa treinar 1 hora por dia para emagrecer.</Span>
+                <br />
+                Você não precisa se deslocar para a academia. Você não precisa fazer muita aeróbica
+                (corrida ou caminhada). Você não precisa de exercícios mirabolantes. O{' '}
+                <Span>S30</Span> te dará um direcionamento, um protocolo com treinos voltados para
+                emagrecimento e definição no conforto da sua casa em apenas 4 semanas.
               </Text>
               <Box maxW="40rem" w="100%">
                 <ButtonDefault />
@@ -283,7 +358,6 @@ export const Home: React.FC = () => {
         </chakra.section>
         <chakra.section
           sx={{
-            minH: { base: '100vh' },
             w: { base: '100%' },
             bg: {
               base: `url(${bgSec2.src}) no-repeat`,
@@ -371,17 +445,48 @@ export const Home: React.FC = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Flex
-              h="100vh"
-              alignItems="end"
-              display={{ base: 'fex', lg: 'none', xl: 'none' }}
+            <Grid
+              display={{ base: 'grid', lg: 'none', xl: 'none' }}
               textStyle="h1"
+              fontSize="1.2rem"
+              alignItems="center"
+              rowGap="2rem"
+              mb="2rem"
             >
+              <List textStyle="h1" fontWeight="700" spacing="2rem">
+                <ListItem>
+                  <Flex>
+                    <IconListSection2 />
+                    1:protocolo big coxas completo 80,00 bônus
+                  </Flex>
+                </ListItem>
+                <ListItem>
+                  <Flex>
+                    <IconListSection2 />
+                    2:protocolo abdômen de titannium 50,00 bônus
+                  </Flex>
+                </ListItem>
+                <ListItem>
+                  <Flex>
+                    <IconListSection2 />
+                    3:protocolo bumbum up 80,00 bônus
+                  </Flex>
+                </ListItem>
+                <ListItem>
+                  <Flex>
+                    <IconListSection2 />
+                    4:ebook guia aliemntar resultados 8 semanas 19,90 bônus
+                  </Flex>
+                </ListItem>
+              </List>
               <Heading as="h2" textAlign="center" color="blue.500" fontSize="1.2rem">
                 até aqui você economizou 229,90 acreditar é essencial, mas ter a atitude faz toda
                 diferença
               </Heading>
-            </Flex>
+            </Grid>
+            <Box w={{ base: '100%', lg: '90%', xl: '90%' }}>
+              <ButtonDefault />
+            </Box>
           </Wrapper>
         </chakra.section>
         <chakra.section my="3rem" display={{ base: 'none', lg: 'block', xl: 'block' }}>
@@ -554,7 +659,6 @@ export const Home: React.FC = () => {
         >
           <Wrapper>
             <Grid
-              display={{ base: 'none', lg: 'grid', xl: 'grid' }}
               pos="absolute"
               inset={{ base: 'auto', lg: '10% 27% auto auto', xl: '10% % auto auto' }}
               w={{ base: 'calc(100% - 2rem)', lg: '12rem', xl: '12rem' }}
@@ -638,7 +742,7 @@ export const Home: React.FC = () => {
             <Flex flexWrap="wrap" justifyContent="center" gap="2rem" textStyle="paragraph">
               <ButtonDefault />
               <Box>
-                <Heading as="h4" size="md" textAlign="center" mb="2rem">
+                <Heading as="h4" size="md" textAlign="center" mb="2rem" textStyle="h1">
                   {' '}
                   teste grátis por 7 dias
                 </Heading>
