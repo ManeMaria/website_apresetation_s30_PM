@@ -6,7 +6,7 @@ import { LogoIcon } from '@/assets/icons/LogoIcon';
 export const Banner: React.FC = () => {
   return (
     <chakra.section
-      className="animate__animated animate__fadeIn animate__slower 1s"
+      className="animate__animated animate__fadeInLeft animate__delay 2s"
       sx={{
         minH: { base: '100vh', md: '50vh', lg: '100vh', xl: '100vh' },
 
@@ -28,7 +28,6 @@ export const Banner: React.FC = () => {
         maxW="50rem"
         pos={{ base: 'absolute', lg: 'absolute', xl: 'absolute' }}
         inset={{ base: '50vh auto', lg: '5rem 0 auto 15rem', xl: '5rem 0 auto 15rem' }}
-        className="animate__animated animate__fadeInLeft"
         px={{
           lg: '0',
           xl: '0',

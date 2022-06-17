@@ -21,21 +21,21 @@ function MyApp({ Component, pageProps }: AppProps) {
 
           images: [
             {
-              url: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/leo02.png`,
+              url: `${process.env.NEXT_PUBLIC_BASE_URL}/leo02.png`,
               width: 800,
               height: 600,
               alt: 'leo, o criador',
               type: 'image/png',
             },
             {
-              url: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/leo02.png`,
+              url: `${process.env.NEXT_PUBLIC_BASE_URL}/leo02.png`,
               width: 900,
               height: 800,
               alt: 'leo, o criador Second',
               type: 'image/png',
             },
-            { url: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/leo02.png` },
-            { url: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/leo02.png` },
+            { url: `${process.env.NEXT_PUBLIC_BASE_URL}/leo02.png` },
+            { url: `${process.env.NEXT_PUBLIC_BASE_URL}/leo02.png` },
           ],
         }}
       />
