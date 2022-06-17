@@ -14,6 +14,7 @@ const Video: React.FC = () => {
       alignItems="center"
       flexDir={{ base: 'column', lg: 'row', xl: 'row' }}
       gap="1rem"
+      data-aos="fade-in"
     >
       <ImageNextLogoSecundary scale={!lessThan1080} />
       <chakra.iframe

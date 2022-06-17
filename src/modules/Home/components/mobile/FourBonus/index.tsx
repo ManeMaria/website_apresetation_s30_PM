@@ -23,7 +23,7 @@ export const FourBonus: React.FC = () => {
           data-aos="fade-in"
           data-aos-delay="500"
         >
-          +4 bônus exclusivosa para você extras
+          +4 bônus exclusivos para você extras
         </Heading>
 
         <List textStyle="h2" fontWeight="700" spacing="2rem">

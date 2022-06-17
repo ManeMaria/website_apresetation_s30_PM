@@ -47,7 +47,7 @@ export const ListClientsMobile: React.FC = () => (
       >
         {clientsIimages.map((client, i) => (
           <>
-            <Image src={client01} key={client.src} alt={`client ${i}`} />
+            <Image src={client} key={client.src} alt={`client ${i}`} />
           </>
         ))}
       </Grid>
