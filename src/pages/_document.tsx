@@ -12,8 +12,7 @@ export default function Document() {
         <meta name="msapplication-TileColor" content="#333333" />
         <meta name="theme-color" content="#000000"></meta>
         <meta charSet="UTF-8" />
-        <title>S-30</title>
-        <meta name="description" content="o protocolo que mudará sua vida" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
