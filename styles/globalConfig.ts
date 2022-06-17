@@ -3,6 +3,7 @@ import 'animate.css';
 import "@fontsource/poppins"
 import "@fontsource/poppins/700.css"
 import { colors, textStyles } from './fundations'
+import './external/aos'
 
 
 const theme = extendTheme({

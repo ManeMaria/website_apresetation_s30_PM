@@ -6,8 +6,8 @@ export const Footer: React.FC = () => (
       <Text h="100%" alignContent="end" textAlign="center" py="0.5rem">
         Copyright © 2022 Nome da Empresa de Leo
       </Text>
-      <Text bg="blue.300" w="100%" mt="auto" px="0.5rem">
-        {`Made </> with`} &#128151; by{' '}
+      <Text bg="blue.300" w="100%" mt="auto" px="0.5rem" fontSize="0.8rem">
+        {`made with </> &`} &#128151; by{' '}
         <Link href="https://github.com/ManeMaria" isExternal>
           cesar
         </Link>
