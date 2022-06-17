@@ -3,6 +3,7 @@ import 'animate.css';
 import "@fontsource/poppins"
 import "@fontsource/poppins/700.css"
 import { colors, textStyles } from './fundations'
+import './external/aos'
 
 
 const theme = extendTheme({
@@ -23,7 +24,7 @@ const theme = extendTheme({
         bg: 'black.900',
         h: '100%',
         color: 'white',
-
+        lineHeight: '170%',
         WebkitTapHighlightColor: 'transparent',
       },
     })
