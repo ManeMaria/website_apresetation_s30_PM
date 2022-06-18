@@ -1,17 +1,6 @@
 import { ButtonDefault } from '@/components';
 import Section from '@/components/common/Section';
-import {
-  Grid,
-  Text,
-  Heading,
-  chakra,
-  Box,
-  Flex,
-  ListItem,
-  GridItem,
-  List,
-  Circle,
-} from '@chakra-ui/react';
+import { Grid, Text, chakra, Box, GridItem } from '@chakra-ui/react';
 import Image from 'next/image';
 import { bgSec3, client04, client05 } from '../../assets';
 import { DefaultPhrase } from '../DefaultPhrase';

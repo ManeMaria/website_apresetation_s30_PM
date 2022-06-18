@@ -1,5 +1,5 @@
 import { ButtonDefault } from '@/components';
-import { Grid, Text, Heading, Box, Flex, ListItem, List } from '@chakra-ui/react';
+import { Grid, Heading, Box, Flex, ListItem, List } from '@chakra-ui/react';
 import { IconListSection2 } from '../../IconListSection2';
 import { Span } from '../../Span';
 
