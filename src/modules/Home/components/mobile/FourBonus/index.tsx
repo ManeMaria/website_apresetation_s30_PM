@@ -19,19 +19,12 @@ export const FourBonus: React.FC = () => {
         rowGap="2rem"
         mb="2rem"
       >
-        <Heading
-          as="h2"
-          textAlign="center"
-          color="blue.500"
-          fontSize="1.7rem"
-          data-aos="fade-in"
-          data-aos-delay="500"
-        >
+        <Heading as="h2" textAlign="center" color="blue.500" fontSize="1.7rem" data-aos="fade-in">
           +4 bônus exclusivos para você
         </Heading>
 
         <List textStyle="h2" fontWeight="700" spacing="2rem">
-          <ListItem data-aos="fade-in" data-aos-delay="500">
+          <ListItem data-aos="fade-in">
             <Flex gap="1rem">
               <GiftIcon />
               <Text>
@@ -40,7 +33,7 @@ export const FourBonus: React.FC = () => {
               </Text>
             </Flex>
           </ListItem>
-          <ListItem data-aos="fade-in" data-aos-delay="500">
+          <ListItem data-aos="fade-in">
             <Flex gap="1rem">
               <GiftIcon />
               <Text>
@@ -48,7 +41,7 @@ export const FourBonus: React.FC = () => {
               </Text>
             </Flex>
           </ListItem>
-          <ListItem data-aos="fade-in" data-aos-delay="500">
+          <ListItem data-aos="fade-in">
             <Flex gap="1rem">
               <GiftIcon />
               <Text>
@@ -56,7 +49,7 @@ export const FourBonus: React.FC = () => {
               </Text>
             </Flex>
           </ListItem>
-          <ListItem data-aos="fade-in" data-aos-delay="500">
+          <ListItem data-aos="fade-in">
             <Flex gap="1rem">
               <GiftIcon />
               <Text>

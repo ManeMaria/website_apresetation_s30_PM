@@ -16,6 +16,7 @@ import {
 } from '../../../assets';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { ButtonDefault } from '@/components';
+
 const clientsIimages = [
   client01,
   client02,
@@ -44,7 +45,7 @@ export const ListClientsMobile: React.FC = () => (
       >
         {clientsIimages.map((client, i) => (
           <>
-            <img src={client.src} key={client.src} alt={`client ${i}`} />
+            <img src={client.src} key={`client_${i}`} alt={`client ${i}`} />
           </>
         ))}
       </Grid>

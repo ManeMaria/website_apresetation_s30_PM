@@ -4,11 +4,14 @@ import { Span } from '../Span';
 import bgSec1 from '@/assets/images/bg-sec-1.png';
 import { LogoIcon } from '@/assets/icons/LogoIcon';
 export const Banner: React.FC = () => {
-  const [greateThan900] = useMediaQuery('(min-height: 900px)');
+  const [greateThan900, lessThan600] = useMediaQuery([
+    '(min-height: 900px)',
+    '(max-height: 600px)',
+  ]);
 
   return (
     <chakra.section
-      className="animate__animated animate__fadeInLeft animate__delay 2s"
+      className="animate__animated animate__fadeIn animate__delay 2s"
       sx={{
         minH: { base: '100vh', md: '50vh', lg: '100vh', xl: '100vh' },
 
@@ -20,7 +23,7 @@ export const Banner: React.FC = () => {
         bgPosition: { base: 'top right 15%', lg: 'center', xl: 'center' },
         bgSize: { base: 'auto 55%', lg: 'cover', xl: 'cover' },
         pos: 'relative',
-        mb: { base: greateThan900 ? '0' : '7rem', lg: '0', xl: '0' },
+        mb: { base: greateThan900 ? '0' : lessThan600 ? '15rem' : '7rem', lg: '0', xl: '0' },
       }}
     >
       <Box
