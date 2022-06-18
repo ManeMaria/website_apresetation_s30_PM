@@ -88,7 +88,7 @@ export const ListClientsMobile: React.FC = () => (
       </Grid>
 
       <Box maxW="40rem" w="100%">
-        <ButtonDefault />
+        <ButtonDefault mt="2rem" />
       </Box>
     </Grid>
   </>

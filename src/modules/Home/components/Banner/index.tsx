@@ -1,9 +1,11 @@
 import { ButtonDefault } from '@/components';
-import { Heading, chakra, Box, Flex } from '@chakra-ui/react';
+import { Heading, chakra, Box, Flex, useMediaQuery } from '@chakra-ui/react';
 import { Span } from '../Span';
 import bgSec1 from '@/assets/images/bg-sec-1.png';
 import { LogoIcon } from '@/assets/icons/LogoIcon';
 export const Banner: React.FC = () => {
+  const [greateThan900] = useMediaQuery('(min-height: 900px)');
+
   return (
     <chakra.section
       className="animate__animated animate__fadeInLeft animate__delay 2s"
@@ -18,7 +20,7 @@ export const Banner: React.FC = () => {
         bgPosition: { base: 'top right 15%', lg: 'center', xl: 'center' },
         bgSize: { base: 'auto 55%', lg: 'cover', xl: 'cover' },
         pos: 'relative',
-        mb: { base: '10rem', lg: '0', xl: '0' },
+        mb: { base: greateThan900 ? '0' : '7rem', lg: '0', xl: '0' },
       }}
     >
       <Box
@@ -57,11 +59,13 @@ export const Banner: React.FC = () => {
             />
           </Flex>
           <Heading as="h3" fontSize="1.4rem" mt="1rem" textAlign="left">
-            Tenha menos inchaço abdominal, elimine a retenção e reduza quilos na balança em apenas 4
-            semanas com a ajuda do protocolo <Span>S30</Span>. São necessários 12 minutos por dia
-            pra você ficar mais atraente e com maior autoestima em tempo recorde.
+            Tenha menos{' '}
+            <Span>inchaço abdominal, elimine a retenção e reduza quilos na balança</Span> em apenas
+            4 semanas com a ajuda do protocolo <Span>S30</Span>. <br />
+            São necessários 12 minutos por dia pra você ficar mais <Span>atraente</Span> e com maior{' '}
+            <Span>autoestima</Span> em tempo recorde
           </Heading>
-          <ButtonDefault />
+          <ButtonDefault mt="2rem" />
         </Box>
       </Box>
     </chakra.section>

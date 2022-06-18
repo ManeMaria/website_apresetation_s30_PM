@@ -16,24 +16,40 @@ export const WhoIsTheProgram: React.FC = () => {
         <ListItem>
           <Flex>
             <IconListSection2 />
-            para você que quer ter um bom caimento das roupas.
+            Pra quem tá cansado de perder roupas por conta do peso elevado
           </Flex>
         </ListItem>
         <ListItem>
           <Flex>
             <IconListSection2 />
-            pra você que tá com a barriga inchada.
+            Pra você que quer eliminar a retenção e o inchaço na barriga
           </Flex>
         </ListItem>
         <ListItem>
           <Flex>
             <IconListSection2 />
-            você que é falso magro(a) que tem pochete!
+            Pra quem já está com abuso de ouvir: “você engordou em?”
           </Flex>
         </ListItem>
-        <Text pl="1.5rem">
-          Para quem tá acima do peso. chegou a hora de transformar sua realidade em tempo record
-        </Text>
+        <ListItem>
+          <Flex>
+            <IconListSection2 />
+            Pra quem quer sentar sem dobrar a barriga
+          </Flex>
+        </ListItem>
+        <ListItem>
+          <Flex>
+            <IconListSection2 />
+            Pra quem quer usar biquíni de lacinho
+          </Flex>
+        </ListItem>
+        <ListItem>
+          <Flex>
+            <IconListSection2 />
+            Pra quem quer usar sunga e ficar sem camisa na praia.
+          </Flex>
+        </ListItem>
+
         <ButtonDefault />
       </List>
     </Grid>

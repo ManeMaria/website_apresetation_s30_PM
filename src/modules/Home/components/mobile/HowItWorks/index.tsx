@@ -21,13 +21,13 @@ export const HowItWorks: React.FC = () => {
       </Heading>
       <Box p="1rem" data-aos="fade-in" data-aos-delay="500">
         <Text>
-          O <Span>s30</Span> proriza a quebra de adaptação, fazendo com que seu metabolismo não se
-          adapte aos estimulos mantendo a frequência cardiaca elevada, e então,{' '}
-          <Span fontSize="1rem">queimar mais calorias em tempo recorde.</Span>
+          O <Span textTransform="uppercase">s30</Span> prioriza a quebra de adaptação, fazendo com
+          que seu metabolismo não se adapte aos estimulos mantendo a frequência cardiaca elevada, e
+          então, <Span>queimar mais calorias em tempo recorde.</Span>
         </Text>
         <Text>
-          O <Span>s30</Span> é a combinação perfeita de treinos intensos, frquência ideal e ciência
-          comprovada.
+          O <Span textTransform="uppercase">s30</Span> é a combinação perfeita de treinos intensos,
+          frquência ideal e ciência comprovada.
         </Text>
       </Box>
     </Section>

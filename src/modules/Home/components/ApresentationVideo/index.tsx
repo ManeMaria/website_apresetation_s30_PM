@@ -48,6 +48,5 @@ const Video: React.FC = () => {
 export const ApresentationVideo: React.FC = () => (
   <Section minH={{ base: 'auto' }}>
     <Video />
-    <DefaultPhrase />
   </Section>
 );
