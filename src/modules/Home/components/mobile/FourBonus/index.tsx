@@ -53,7 +53,7 @@ export const FourBonus: React.FC = () => {
             <Flex gap="1rem">
               <GiftIcon />
               <Text>
-                4:guia aliemntar, resultados 8 semanas <LineThrough>19,90</LineThrough>
+                4:guia aliemtar, resultados 8 semanas <LineThrough>19,90</LineThrough>
               </Text>
             </Flex>
           </ListItem>
