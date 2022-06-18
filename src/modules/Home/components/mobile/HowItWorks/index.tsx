@@ -17,7 +17,7 @@ export const HowItWorks: React.FC = () => {
       }}
     >
       <Heading as="h2" textAlign="center" w="100%" data-aos="fade-in">
-        <Span>Como funciona o protocolo s30?</Span>
+        <Span>Como funciona o protocolo S30?</Span>
       </Heading>
       <Box p="1rem" data-aos="fade-in" data-aos-delay="500">
         <Text>

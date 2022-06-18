@@ -1,10 +1,12 @@
 import { ButtonDefault } from '@/components';
 import Section from '@/components/common/Section';
-import { Grid, Text, Box, Flex } from '@chakra-ui/react';
+import { Grid, Text, Box, Flex, useMediaQuery } from '@chakra-ui/react';
 import { leo04, leo05 } from '../../assets';
 import { ItTimeChange } from '../ItTimeChange';
 
 export const Price: React.FC = () => {
+  const [greateThan700] = useMediaQuery('(max-height: 700px)');
+
   return (
     <Section
       sx={{
@@ -20,7 +22,7 @@ export const Price: React.FC = () => {
         bgSize: { base: '100%', lg: '65%', xl: '60%' },
         pos: 'relative',
         boxShadow: 'inset 0 0 50px 50px #000',
-        mb: { base: '10rem', lg: '0', xl: '0' },
+        mb: { base: greateThan700 ? '15rem' : '10rem', lg: '0', xl: '0' },
       }}
     >
       <ItTimeChange data-aos="fade-in" display={{ base: 'block', lg: 'none', xl: 'none' }} />
