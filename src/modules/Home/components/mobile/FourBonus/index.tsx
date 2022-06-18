@@ -37,7 +37,7 @@ export const FourBonus: React.FC = () => {
             <Flex gap="1rem">
               <GiftIcon />
               <Text>
-                2:protocolo abdômen de titannium <LineThrough>50,00</LineThrough>
+                2:protocolo abdômen de titanium <LineThrough>50,00</LineThrough>
               </Text>
             </Flex>
           </ListItem>
@@ -53,7 +53,7 @@ export const FourBonus: React.FC = () => {
             <Flex gap="1rem">
               <GiftIcon />
               <Text>
-                4:guia aliemtar, resultados 8 semanas <LineThrough>19,90</LineThrough>
+                4:guia alimentar, resultados em 8 semanas <LineThrough>19,90</LineThrough>
               </Text>
             </Flex>
           </ListItem>
