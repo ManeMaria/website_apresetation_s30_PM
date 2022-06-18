@@ -12,7 +12,6 @@ export function ButtonDefault({ children, ...props }: ButtonProps) {
       w="100%"
       borderRadius={40}
       py="2rem"
-      mt="2rem"
       fontSize="1.2rem"
       boderColor="yellow.500"
       _hover={{

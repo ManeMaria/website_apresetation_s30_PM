@@ -23,12 +23,12 @@ export const BeforeAndAfter: React.FC = () => {
       <Heading
         as="h2"
         fontSize={{ base: '2rem', lg: '3rem', xl: '3rem', '2xl': '3rem' }}
-        m="0 0 3rem 0"
+        my="3rem"
         textAlign="center"
         textStyle="h2"
         w="100%"
       >
-        <Span>antes de depois</Span>
+        <Span>antes e depois</Span>
       </Heading>
       <Grid
         display={{ base: 'none', lg: 'grid', xl: 'grid' }}
