@@ -5,12 +5,15 @@ import { leo04, leo05 } from '../../assets';
 import { ItTimeChange } from '../ItTimeChange';
 
 export const Price: React.FC = () => {
-  const [greateThan700] = useMediaQuery('(max-height: 700px)');
+  const [greateThan700, lessThan600] = useMediaQuery([
+    '(max-height: 700px)',
+    '(max-height: 600px)',
+  ]);
 
   return (
     <Section
       sx={{
-        h: { base: '100vh', lg: '120vh', xl: '120vh' },
+        h: { base: lessThan600 ? '130vh' : '100vh', lg: '120vh', xl: '120vh' },
         maxH: '100rem',
         w: { base: '100%' },
         bg: {

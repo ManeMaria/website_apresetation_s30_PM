@@ -4,8 +4,8 @@ import { ImageNextLogoSecundary } from '../ImageNextLogoSecundary';
 import { WhoIsTheProgram } from '../mobile/WhoIsTheProgram';
 
 const Video: React.FC = () => {
-  const [lessThan1080] = useMediaQuery('(max-width: 1080px)');
-  const [greateThan700] = useMediaQuery('(max-height: 700px)');
+  const [lessThan1080, lessThan700] = useMediaQuery(['(max-width: 1080px)', '(max-height: 700px)']);
+
   return (
     <Flex
       w="100%"
@@ -15,7 +15,7 @@ const Video: React.FC = () => {
       flexDir={{ base: 'column', lg: 'row', xl: 'row' }}
       gap="1rem"
       data-aos="fade-in"
-      mt={greateThan700 ? '5rem' : '0'}
+      mt={lessThan700 ? '5rem' : '0'}
     >
       <ImageNextLogoSecundary scale={!lessThan1080} />
       <chakra.iframe
