@@ -1,5 +1,5 @@
 import Section from '@/components/common/Section';
-import { Grid, Text, Heading, Box, Circle } from '@chakra-ui/react';
+import { Grid, Heading } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import { Span } from '../Span';

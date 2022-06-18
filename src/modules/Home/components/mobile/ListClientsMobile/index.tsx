@@ -1,7 +1,4 @@
-import Section from '@/components/common/Section';
-import { Grid, Text, Heading, Box, Circle } from '@chakra-ui/react';
-import Image from 'next/image';
-
+import { Grid, Text, Box, Circle } from '@chakra-ui/react';
 import { Span } from '../../Span';
 
 import {
@@ -47,7 +44,7 @@ export const ListClientsMobile: React.FC = () => (
       >
         {clientsIimages.map((client, i) => (
           <>
-            <Image src={client} key={client.src} alt={`client ${i}`} />
+            <img src={client.src} key={client.src} alt={`client ${i}`} />
           </>
         ))}
       </Grid>

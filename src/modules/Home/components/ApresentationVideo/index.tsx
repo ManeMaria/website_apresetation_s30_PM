@@ -1,6 +1,5 @@
 import Section from '@/components/common/Section';
 import { chakra, Flex, useMediaQuery } from '@chakra-ui/react';
-import { DefaultPhrase } from '../DefaultPhrase';
 import { ImageNextLogoSecundary } from '../ImageNextLogoSecundary';
 import { WhoIsTheProgram } from '../mobile/WhoIsTheProgram';
 
