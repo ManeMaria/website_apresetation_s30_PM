@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from '../../styles/globalConfig';
-
+import { FacebookPixel } from '../components/Pixel/facebook';
 import { DefaultSeo } from 'next-seo';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           ],
         }}
       />
-
+      <FacebookPixel />
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
