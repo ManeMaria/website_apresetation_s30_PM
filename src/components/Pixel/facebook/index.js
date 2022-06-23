@@ -17,7 +17,7 @@ export const FacebookPixel = () => {
     s.parentNode.insertBefore(t, s)
   }(window, document, 'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '3184960268414927');
+  fbq('init', '1491755401277361');
   fbq('track', 'PageView');`,
           }}
         />
