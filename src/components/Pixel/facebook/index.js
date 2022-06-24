@@ -23,7 +23,7 @@ export const FacebookPixel = () => {
         />
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3184960268414927&ev=PageView&noscript=1" />`,
+            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1491755401277361&ev=PageView&noscript=1" />`,
           }}
         />
       </>
