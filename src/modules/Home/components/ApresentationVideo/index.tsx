@@ -17,7 +17,12 @@ const Video: React.FC = () => {
       data-aos="fade-in"
       mt={lessThan700 ? '5rem' : '0'}
     >
-      <ImageNextLogoSecundary scale={!lessThan1080} />
+      <ImageNextLogoSecundary
+        scale={!lessThan1080}
+        chakraProps={{
+          display: { base: 'none', lg: 'block', xl: 'block' },
+        }}
+      />
       <chakra.iframe
         left="50%"
         top="50%"

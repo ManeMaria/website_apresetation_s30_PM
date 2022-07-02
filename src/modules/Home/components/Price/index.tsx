@@ -61,7 +61,7 @@ export const Price: React.FC = () => {
                     textTransform="none"
                     fontSize={{ base: '2rem', lg: '2.5rem', xl: '2.5rem' }}
                   >
-                    De 197,90
+                    De 447,90
                   </Text>
                   <Box
                     h="3px"
