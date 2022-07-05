@@ -16,11 +16,12 @@ export const Banner: React.FC = () => {
     >
       <Box
         bg={{ base: 'black.900', lg: '0', xl: '0' }}
-        w={{ base: '100vw', lg: '45vw', xl: '45vw' }}
+        w={{ base: '100vw', lg: '60vw', xl: '60vw' }}
         h={{ base: '30rem', lg: 'auto', xl: 'auto' }}
         maxW="50rem"
-        pos={{ base: 'absolute', lg: 'absolute', xl: 'absolute' }}
-        inset={{ base: '10vh auto', lg: '5rem 0 auto 15rem', xl: '5rem 0 auto 15rem' }}
+        pos={{ base: 'absolute' }}
+        inset={{ base: '10vh 50%' }}
+        transform="translateX(-50%)"
         px={{
           lg: '0',
           xl: '0',
@@ -33,8 +34,8 @@ export const Banner: React.FC = () => {
           pos={{ base: 'static', lg: 'static', xl: 'static' }}
           top={{ base: '-5rem' }}
           px={{
-            lg: '0',
-            xl: '0',
+            lg: 'auto',
+            xl: 'auto',
             base: '1rem',
           }}
         >
