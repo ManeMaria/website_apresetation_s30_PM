@@ -23,7 +23,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src/components/Pixel/facebook/index.js"
   ],
   "exclude": [
     "node_modules"
