@@ -3,12 +3,16 @@ import Section from '@/components/common/Section';
 import { payments, stamp } from '@/modules/Home/assets';
 import { Text, Heading, Box, Flex } from '@chakra-ui/react';
 import Image from 'next/image';
+import CountDown from '../../CountDown';
 
 export const PaymentsMethods: React.FC = () => {
   return (
     <Section display={{ base: 'block', lg: 'none', xl: 'none' }} mb="2rem">
       <Flex flexWrap="wrap" justifyContent="center" gap="2rem">
         <ButtonDefault />
+        <Box my="2rem">
+          <CountDown />
+        </Box>
         <Image src={stamp} alt="selo" />
         <Box>
           <Heading as="h4" size="md" textAlign="center" mb="2rem" textStyle="h2">
