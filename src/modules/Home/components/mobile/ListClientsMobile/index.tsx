@@ -32,6 +32,18 @@ const clientsIimages = [
   leo03,
 ];
 
+const styleButton = {
+  bg: 'none',
+  _active: {},
+  _hover: {},
+  w: '26px',
+  _focus: {},
+};
+const styleArrowForwardIcon = {
+  boxSize: '25px',
+  color: 'black',
+};
+
 const largeWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
 
 export const ListClientsMobile: React.FC = () => {
@@ -61,31 +73,32 @@ export const ListClientsMobile: React.FC = () => {
           ))}
         </Grid>
       </Grid>
-      <Flex justifySelf="center" my="2rem" display={{ base: 'Flex', lg: 'none', xl: 'none' }}>
+      <Flex
+        justifySelf="center"
+        my="2rem"
+        gap="2rem"
+        display={{ base: 'Flex', lg: 'none', xl: 'none' }}
+      >
         <Button
+          {...styleButton}
           disabled={pos === 0}
-          bg="none"
-          _active={{}}
-          _hover={{}}
           onClick={() => {
             setPos((pos) => pos + largeWidth);
           }}
         >
           <Circle size="40px" bg="blue.500" transform="rotate(-180deg)">
-            <ArrowForwardIcon boxSize="25px" color="black" />
+            <ArrowForwardIcon {...styleArrowForwardIcon} />
           </Circle>
         </Button>
         <Button
+          {...styleButton}
           disabled={widthTotal + pos === 0}
-          bg="none"
-          _active={{}}
-          _hover={{}}
           onClick={() => {
             setPos((pos) => pos - largeWidth);
           }}
         >
           <Circle size="40px" bg="blue.500">
-            <ArrowForwardIcon boxSize="25px" color="black" />
+            <ArrowForwardIcon {...styleArrowForwardIcon} />
           </Circle>
         </Button>
       </Flex>
