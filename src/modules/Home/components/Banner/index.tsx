@@ -3,36 +3,43 @@ import { Heading, chakra, Box, Flex, useMediaQuery } from '@chakra-ui/react';
 import { Span } from '../Span';
 
 import { LogoIcon } from '@/assets/icons/LogoIcon';
+import { bgSec1 } from '../../assets';
 export const Banner: React.FC = () => {
+  const [lessThan640] = useMediaQuery('(max-height: 640px)');
+
   return (
     <chakra.section
       className="animate__animated animate__fadeIn animate__delay 2s"
       sx={{
         minH: { base: '80vh', md: '50vh', lg: '100vh', xl: '100vh' },
         w: { base: '100%' },
-        pos: 'relative',
-        mb: { base: '0' },
+        bg: {
+          base: `url(${bgSec1.src}) no-repeat`,
+        },
+        bgPosition: { base: 'left center' },
+        bgSize: { base: 'cover' },
+        mb: { base: lessThan640 ? '25rem' : '15rem', lg: '0', xl: '0' },
       }}
     >
       <Box
-        bg={{ base: 'black.900', lg: '0', xl: '0' }}
+        bg={{ base: '0', lg: '0', xl: '0' }}
         w={{ base: '100vw', lg: '60vw', xl: '60vw' }}
-        h={{ base: '30rem', lg: 'auto', xl: 'auto' }}
+        h={{ base: 'auto', lg: 'auto', xl: 'auto' }}
         maxW="50rem"
         pos={{ base: 'absolute' }}
-        inset={{ base: '10vh 50%' }}
+        inset={{ base: '-5rem 50%', lg: '5rem 50%', xl: '5rem 50%' }}
         transform="translateX(-50%)"
         px={{
           lg: '0',
           xl: '0',
           base: '1rem',
         }}
-        pt={{ base: '0', lg: '0', xl: '0' }}
-        boxShadow={{ base: '0px -20px 60px 50px #000', lg: 'none', xl: 'none' }}
+
+        // boxShadow={{ base: '0px -20px 60px 50px #000', lg: 'none', xl: 'none' }}
       >
         <Box
-          pos={{ base: 'static', lg: 'static', xl: 'static' }}
-          top={{ base: '-5rem' }}
+          pos={{ base: 'absolute', lg: 'static', xl: 'static' }}
+          top={{ base: '25rem' }}
           px={{
             lg: 'auto',
             xl: 'auto',
