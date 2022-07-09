@@ -2,6 +2,7 @@ import { ButtonDefault } from '@/components';
 import Section from '@/components/common/Section';
 import { Grid, Text, Box, Flex, useMediaQuery } from '@chakra-ui/react';
 import { leo04, leo05 } from '../../assets';
+import CountDown from '../CountDown';
 import { ItTimeChange } from '../ItTimeChange';
 
 export const Price: React.FC = () => {
@@ -99,8 +100,11 @@ export const Price: React.FC = () => {
             </Flex>
           </Flex>
         </Box>
-        <Box display={{ base: 'none', lg: 'block', xl: 'block' }}>
+        <Box display={{ base: 'none', lg: 'block', xl: 'block' }} my="2rem">
           <ButtonDefault />
+          <Box mt="2rem">
+            <CountDown />
+          </Box>
         </Box>
       </Grid>
     </Section>
