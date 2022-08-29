@@ -106,7 +106,7 @@ export const Price: React.FC = () => {
                 lineHeight="initial"
                 h={{ lg: "13rem", xl: "13rem" }}
               >
-                <Box>279</Box>
+                <Box>297</Box>
               </Box>
               <Box pos="relative" w="100%" minH="100%">
                 <Box
