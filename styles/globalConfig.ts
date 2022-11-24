@@ -22,7 +22,7 @@ const theme = extendTheme({
       },
       body: {
         bg: 'black.900',
-        h: '100%',
+        h: '100vh',
         color: 'white',
         lineHeight: '170%',
         WebkitTapHighlightColor: 'transparent',

@@ -17,6 +17,9 @@ const CountDown: React.FC = () => {
       setTime(time - 1);
     }, 1000);
   }, [time]);
+
+
+
   return (
     <div className={styles.countdown}>
       <div>

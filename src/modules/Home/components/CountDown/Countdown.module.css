@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   font-weight: 600;
-  color: red;
+  color: #1F96FF;
+
 }
 
 .countdown div {
@@ -10,30 +11,26 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: white;
+  background: none;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   font-size: 7rem;
   text-align: center;
-  height: 8rem;
+  height: 7rem;
   min-width: 10rem;
 }
 
 .countdown div span {
   flex: 1;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
-.countdown div span:first-child {
-  border-right: 1px solid #F0F1F3;
 
-}
-
-.countdown div span:last-child {
-  border-left: 1px solid #F0F1F3;
-
-}
 
 .countdown>span {
   font-size: 6.25rem;
   margin: 0 0.5rem;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
