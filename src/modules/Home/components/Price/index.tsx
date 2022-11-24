@@ -1,6 +1,6 @@
 import { ButtonDefault } from "@/components";
 import Section from "@/components/common/Section";
-import { Grid, Text, Box, Flex, useMediaQuery } from "@chakra-ui/react";
+import { Grid, Text, Box, Flex, useMediaQuery, Heading } from "@chakra-ui/react";
 import { leo04, leo05 } from "../../assets";
 import CountDown from "../CountDown";
 import { ItTimeChange } from "../ItTimeChange";
@@ -26,7 +26,7 @@ export const Price: React.FC = () => {
         bgSize: { base: "100%", lg: "65%", xl: "60%" },
         pos: "relative",
         boxShadow: "inset 0 0 50px 50px #000",
-        mb: { base: greateThan700 ? "15rem" : "10rem", lg: "0", xl: "0" },
+        mb: { base: greateThan700 ? "15rem" : "10rem", lg: "0", xl: "3rem" },
       }}
     >
       <ItTimeChange
@@ -44,7 +44,23 @@ export const Price: React.FC = () => {
         inset={{ base: "auto", lg: "10% 27% auto auto", xl: "10% % auto auto" }}
         w={{ base: "calc(100% - 2rem)", lg: "12rem", xl: "12rem" }}
       >
-        <ItTimeChange display={{ base: "none", lg: "block", xl: "block" }} />
+        <ItTimeChange display={{ base: "none", lg: "block", xl: "block" }} mb="0" />
+        <Heading sx={{
+          'text-shadow':
+            `0 0 4px #fff,
+        0 0 0px #fff,
+        0 0 12px #fff,
+        0 0 16px #1F96FF,
+        0 0 32px #1F96FF,
+        0 0 64px #1F96FF,
+        0 0 192px #1F96FF,
+        0 0 200px #1F96FF`,
+          textTransform: 'uppercase',
+          fontSize: { base: '2rem', xl: '2rem' },
+          textAlign: 'center'
+        }}>
+          Preço especial black friday
+        </Heading>
         <Box
           border={{ base: "none", lg: "solid 5px", xl: "solid 5px" }}
           borderColor="white"
@@ -106,7 +122,7 @@ export const Price: React.FC = () => {
                 lineHeight="initial"
                 h={{ lg: "13rem", xl: "13rem" }}
               >
-                <Box>97</Box>
+                <Box>17</Box>
               </Box>
               <Box pos="relative" w="100%" minH="100%">
                 <Box
@@ -122,7 +138,7 @@ export const Price: React.FC = () => {
         </Box>
         <Box display={{ base: "none", lg: "block", xl: "block" }} my="2rem">
           <ButtonDefault />
-          <Box mt="2rem">
+          <Box mt="1rem">
             <CountDown />
           </Box>
         </Box>

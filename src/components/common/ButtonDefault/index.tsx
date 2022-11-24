@@ -1,8 +1,6 @@
 import {
   Button,
-  ButtonGroupProps,
   ButtonProps,
-  ChakraProps,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -18,7 +16,7 @@ export function ButtonDefault({ children, ...props }: ButtonProps) {
       borderRadius={40}
       py="2rem"
       fontSize="1.2rem"
-      boderColor="yellow.500"
+      borderColor="yellow.500"
       _hover={{
         bg: "yellow.500",
         boxShadow: "0 0 10px 1px #EDA91E",
